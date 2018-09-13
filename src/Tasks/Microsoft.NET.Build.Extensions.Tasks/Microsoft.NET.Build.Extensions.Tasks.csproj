@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (c) .NET Foundation and contributors. All rights reserved. Licensed under the MIT license. See License.txt in the project root for full license information. -->
-<Project>
+<Project Sdk="Microsoft.NET.Sdk">
 
   <!-- This is a smaller build of Microsoft.NET.Build.Tasks to be used outside of SDK projects -->
 
@@ -20,8 +20,6 @@
     <OutDirName>Sdks\$(PackageId)\msbuildExtensions\Microsoft\Microsoft.NET.Build.Extensions\tools</OutDirName>
     <NoPackageAnalysis>true</NoPackageAnalysis>
   </PropertyGroup>
-
-  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
 
   <PropertyGroup>
     <!-- MSBuild Task DLLs need to be versioned with every build -->
@@ -104,7 +102,5 @@
       <AllCopyLocalItems Remove="@(_CopyLocalButNotPublished)" />
     </ItemGroup>
   </Target>
-
-  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
 
 </Project>
